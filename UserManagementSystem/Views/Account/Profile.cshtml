@@ -1,0 +1,35 @@
+﻿<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body p-4 text-center">
+                    <h3 class="card-title mb-4">My Profile</h3>
+                    <p class="fs-5">Welcome,<strong>@Context.Session.GetString("UserName")</strong></p>
+                    <p class="text-muted">You are logged in successfully ✅</p>
+                    <div class="container mt-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card shadow border-0" style="border-radius: 20px;">
+                                    <div class="card-body p-5 text-center">
+
+                                        <div style="font-size: 5rem;">👤</div>
+                                        <h3 class="fw-bold mt-3" style="color: #0d6efd;">My Profile</h3>
+                                        <p class="fs-5 mt-2">Welcome, <strong>@Context.Session.GetString("UserName")</strong></p>
+                                        <p class="text-muted">You are logged in successfully ✅</p>
+
+                                        <div class="d-flex justify-content-center gap-3 mt-4">
+                                            <a asp-action="EditProfile" class="btn btn-primary px-4">✏️ Edit Profile</a>
+                                            <a asp-action="Logout" class="btn btn-danger px-4">Logout</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a asp-action="Logout" class="btn btn-danger mt-3">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

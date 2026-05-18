@@ -1,0 +1,115 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+    var userName = Context.Session.GetString("UserName");
+}
+
+@if (userName != null)
+{
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+
+                <!-- Welcome Banner -->
+                <div class="card shadow border-0 mb-4" style="border-radius: 20px; background: linear-gradient(135deg, #0d6efd, #6610f2);">
+                    <div class="card-body p-5">
+                        <h2 class="text-white fw-bold">Welcome back, @userName! 👋</h2>
+                        <p class="text-white-50 mb-0">Here's your personal dashboard — everything in one place.</p>
+                    </div>
+                </div>
+
+                <!-- Cards Row -->
+                <div class="row g-4">
+
+                    <div class="col-md-4">
+                        <div class="card shadow border-0 text-center p-4 h-100" style="border-radius: 15px; border-top: 4px solid #0d6efd !important;">
+                            <div style="font-size: 3rem;">👤</div>
+                            <h5 class="mt-2 fw-bold">My Profile</h5>
+                            <p class="text-muted small">View and manage your personal info</p>
+                            <a asp-controller="Account" asp-action="Profile" class="btn btn-primary btn-sm mt-auto">Open →</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card shadow border-0 text-center p-4 h-100" style="border-radius: 15px; border-top: 4px solid #6610f2 !important;">
+                            <div style="font-size: 3rem;">🔑</div>
+                            <h5 class="mt-2 fw-bold">Security</h5>
+                            <p class="text-muted small">Manage your password and security</p>
+                            <a asp-controller="Account" asp-action="ChangePassword" class="btn btn-sm mt-auto" style="background-color: #6610f2; color: white;">Open →</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card shadow border-0 text-center p-4 h-100" style="border-radius: 15px; border-top: 4px solid #20c997 !important;">
+                            <div style="font-size: 3rem;">⚙️</div>
+                            <h5 class="mt-2 fw-bold">Settings</h5>
+                            <p class="text-muted small">Customize your account preferences</p>
+                            <a href="#" class="btn btn-sm mt-auto" style="background-color: #20c997; color: white;">Open →</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card shadow border-0 text-center p-4 h-100" style="border-radius: 15px; border-top: 4px solid #fd7e14 !important;">
+                            <div style="font-size: 3rem;">📊</div>
+                            <h5 class="mt-2 fw-bold">Statistics</h5>
+                            <p class="text-muted small">Track your activity and progress</p>
+                            <a href="#" class="btn btn-sm mt-auto" style="background-color: #fd7e14; color: white;">Open →</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card shadow border-0 text-center p-4 h-100" style="border-radius: 15px; border-top: 4px solid #dc3545 !important;">
+                            <div style="font-size: 3rem;">🔔</div>
+                            <h5 class="mt-2 fw-bold">Notifications</h5>
+                            <p class="text-muted small">Stay updated with your alerts</p>
+                            <a href="#" class="btn btn-sm mt-auto" style="background-color: #dc3545; color: white;">Open →</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card shadow border-0 text-center p-4 h-100" style="border-radius: 15px; border-top: 4px solid #0dcaf0 !important;">
+                            <div style="font-size: 3rem;">💬</div>
+                            <h5 class="mt-2 fw-bold">Messages</h5>
+                            <p class="text-muted small">View and send messages</p>
+                            <a href="#" class="btn btn-sm mt-auto" style="background-color: #0dcaf0; color: white;">Open →</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-7 text-center">
+                <div class="card shadow border-0 p-5" style="border-radius: 20px; background: linear-gradient(135deg, #f8f9fa, #e9ecef);">
+                    <div style="font-size: 5rem;">🚀</div>
+                    <h1 class="fw-bold mt-3" style="color: #0d6efd;">My Dashboard</h1>
+                    <p class="text-muted mt-2 fs-5">Your personal space to manage everything in one place.</p>
+
+                    <div class="row mt-4 mb-4 text-center">
+                        <div class="col-4">
+                            <div style="font-size: 2rem;">🔐</div>
+                            <p class="small text-muted mt-1">Secure</p>
+                        </div>
+                        <div class="col-4">
+                            <div style="font-size: 2rem;">⚡</div>
+                            <p class="small text-muted mt-1">Fast</p>
+                        </div>
+                        <div class="col-4">
+                            <div style="font-size: 2rem;">🎯</div>
+                            <p class="small text-muted mt-1">Simple</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center gap-3">
+                        <a asp-controller="Account" asp-action="Register" class="btn btn-primary btn-lg px-5" style="border-radius: 10px;">Get Started 🚀</a>
+                        <a asp-controller="Account" asp-action="Login" class="btn btn-outline-primary btn-lg px-5" style="border-radius: 10px;">Login →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

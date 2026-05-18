@@ -1,0 +1,51 @@
+﻿@model UserManagementSystem.Models.RegisterViewModel
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card shadow">
+                <div class="card-body p-4">
+
+                    <h3 class="card-title text-center mb-4">Add New Account</h3>
+
+
+                       <form asp-action="Register" method="post">
+                           <div class="mb-3">
+                                <label asp-for="FullName" class="form-label">Full Name</label>
+                                <input asp-for="FullName" class="form-control" placeholder="Enter Your Name"/>
+                                <span asp-validation-for="FullName" class="text-danger"></span>
+                             </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Email" class="form-label">Email</label>
+                                <input asp-for="Email" class="form-control" placeholder="Enter Email"/>
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Password" class="form-label">Password</label>
+                                <input asp-for="Password" type="password" class="form-control" placeholder="Enter Password" />
+                                <span asp-validation-for="Password" class="text-danger"></span> 
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="ConfirmPassword" class="form-label">Confirm Password</label>
+                                <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Confirm The Password" />
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+
+                            <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Register</button>
+
+                            </div>
+
+                                
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
