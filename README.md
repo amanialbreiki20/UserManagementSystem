@@ -28,9 +28,5 @@ A full-stack web application built with ASP.NET Core MVC and C#.
 3. Run migrations: `Update-Database`
 4. Run the project: `F5`
 
-   
-## Author 👩‍💻
-Built with ❤️ as a learning project
-
 ## Author 👩‍💻
 Built with ❤️ as a learning project
